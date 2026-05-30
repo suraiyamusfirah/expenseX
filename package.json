@@ -1,0 +1,25 @@
+{
+  "name": "expensex",
+  "version": "0.1.0",
+  "description": "Personal finance money tracker built with Node.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test",
+    "migrate": "node -r dotenv/config ./node_modules/db-migrate/bin/db-migrate up --config database.json",
+    "migrate:down": "node -r dotenv/config ./node_modules/db-migrate/bin/db-migrate down --config database.json",
+    "migrate:status": "node -r dotenv/config ./node_modules/db-migrate/bin/db-migrate up --dry-run --config database.json",
+    "migrate:create": "node -r dotenv/config ./node_modules/db-migrate/bin/db-migrate create --config database.json"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "db-migrate-mysql": "^3.0.0",
+    "dotenv": "^17.4.2"
+  },
+  "devDependencies": {
+    "db-migrate": "^0.11.14"
+  }
+}

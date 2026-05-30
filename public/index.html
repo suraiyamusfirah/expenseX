@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ExpenseX</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Personal money tracker</p>
+          <h1>ExpenseX</h1>
+        </div>
+        <div class="status" id="status">Ready</div>
+      </header>
+
+      <section class="summary-grid" aria-label="Money summary">
+        <article class="metric">
+          <span>Income</span>
+          <strong id="income">$0.00</strong>
+        </article>
+        <article class="metric">
+          <span>Expenses</span>
+          <strong id="expense">$0.00</strong>
+        </article>
+        <article class="metric metric-balance">
+          <span>Balance</span>
+          <strong id="balance">$0.00</strong>
+        </article>
+      </section>
+
+      <section class="workspace">
+        <form class="panel form" id="transaction-form">
+          <h2>Add Transaction</h2>
+          <label>
+            Type
+            <select name="type" required>
+              <option value="expense">Expense</option>
+              <option value="income">Income</option>
+            </select>
+          </label>
+          <label>
+            Amount
+            <input name="amount" inputmode="decimal" pattern="^[0-9]+(\.[0-9]{1,2})?$" placeholder="0.00" required>
+          </label>
+          <label>
+            Category
+            <input name="category" placeholder="Food, Salary, Rent" required>
+          </label>
+          <label>
+            Note
+            <input name="note" placeholder="Optional note">
+          </label>
+          <label>
+            Date
+            <input name="date" type="date" required>
+          </label>
+          <button type="submit">Add Transaction</button>
+        </form>
+
+        <section class="panel transactions">
+          <div class="section-heading">
+            <h2>Transactions</h2>
+            <span id="transaction-count">0 items</span>
+          </div>
+          <div class="transaction-list" id="transaction-list"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>

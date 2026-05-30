@@ -18,7 +18,7 @@ For development with automatic restarts:
 npm run dev
 ```
 
-Open `http://localhost:3000`.
+<!-- Open `http://localhost:3000`.
 
 ## Test
 
@@ -39,5 +39,5 @@ Example:
 ```sh
 curl -X POST http://localhost:3000/api/transactions \
   -H 'Content-Type: application/json' \
-  -d '{"type":"expense","amount":14.5,"category":"Food","note":"Lunch","date":"2026-05-29"}'
+  -d '{"type":"expense","amount":14.5,"category":"Food","note":"Lunch","date":"2026-05-29"}' -->
 ```
