@@ -1,6 +1,6 @@
 # ExpenseX
 
-ExpenseX is a Node.js monolith for personal money tracking. It includes a small HTTP API, file-backed JSON storage, and a browser dashboard for income, expenses, and monthly balance.
+ExpenseX is a Node.js monolith for personal money tracking. It includes a small HTTP API, file-backed JSON storage, and a browser dashboard for income, expenses, and monthly balance. This will be my small project towards on learning new stack as part of my upskilling process.
 
 ## Requirements
 
